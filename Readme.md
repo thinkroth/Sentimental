@@ -1,4 +1,4 @@
-
+[![Build Status](https://secure.travis-ci.org/thinkroth/Sentimental.png)](http://travis-ci.org/thinkroth/Sentimental)
 # SentiMental - Putting the Mental in Sentimental
       
   Sentiment analysis tool for node.js based on the [AFINN-111 wordlist](http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id=6010).
