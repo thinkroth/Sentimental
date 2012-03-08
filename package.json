@@ -1,0 +1,14 @@
+{
+  "name": "Sentimental",
+  "version": "0.0.1",
+  "author": "Kevin M Roth",
+  "dependencies": {
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "devDependencies": {
+    "mocha": "0.10.0",
+    "should": "0.6.0"
+  }
+}
