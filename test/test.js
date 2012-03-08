@@ -71,7 +71,7 @@ describe('Positivity', function () {
       done();
     });
   });
-  describe('#negativeWordCount', function () {
+  describe('#positiveWordCount', function () {
     it('should return the positive world count', function (done) {
       positivity("This is two amazing cool words").words.length.should.equal(2);
       done();
