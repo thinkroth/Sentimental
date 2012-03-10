@@ -93,6 +93,11 @@ describe('Analyze', function () {
       analyze("Hey scumbag").score.should.equal(-4);
       done();
     });
+    it('should ignore punctuation', function (done) {
+      analyze("Fearless!").score.should.equal(2);
+      analyze("Crash!").score.should.equal(-2);
+      done();
+    });
   });
   describe('#comparative', function () {
     it('should equal (positive - negative) / word count ', function (done) {
