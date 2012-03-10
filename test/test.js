@@ -93,9 +93,14 @@ describe('Analyze', function () {
       analyze("Hey scumbag").score.should.equal(-4);
       done();
     });
-    it('should ignore punctuation', function (done) {
+    it('should ignore ending punctuation', function (done) {
       analyze("Fearless!").score.should.equal(2);
       analyze("Crash!").score.should.equal(-2);
+      done();
+    });
+    it('should ignore hashtags', function (done) {
+      analyze("#fearless").score.should.equal(2);
+      analyze("#crash").score.should.equal(-2);
       done();
     });
   });
