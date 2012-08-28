@@ -12,6 +12,10 @@
   * Negativity ranking
   * Analyze - combines Positivity and Negativity ranking into an aggregate sentiment score
 
+## TODO [Russian]
+
+  * Add Porter's stemming support to wordlist
+
 ## Example
 ```js
 var analyze = require('sentimental').analyze,
@@ -41,6 +45,7 @@ then run the tests:
 
 (The MIT License)
 
+Copyright (c) 2012 Roman K Yudin &lt;r@wobot.co&gt;
 Copyright (c) 2012 Kevin M Roth &lt;kevinroth82@gmail.com&gt;
 
 Permission is hereby granted, free of charge, to any person obtaining
