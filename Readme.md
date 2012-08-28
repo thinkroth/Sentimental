@@ -46,6 +46,7 @@ then run the tests:
 (The MIT License)
 
 Copyright (c) 2012 Roman K Yudin &lt;r@wobot.co&gt;
+
 Copyright (c) 2012 Kevin M Roth &lt;kevinroth82@gmail.com&gt;
 
 Permission is hereby granted, free of charge, to any person obtaining
