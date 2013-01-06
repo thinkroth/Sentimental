@@ -26,6 +26,66 @@ describe('Negativity', function () {
       negativity("anti").score.should.equal(1);
       done();
     });
+    it('level 5 word with level 1 intensifier should return 10 points', function (done) {
+      negativity("such bastard").score.should.equal(10);
+      done();
+    });
+    it('level 5 word with level 2 intensifier should return 15 points', function (done) {
+      negativity("complete bastard").score.should.equal(15);
+      done();
+    });
+    it('level 5 word with level 3 intensifier should return 20 points', function (done) {
+      negativity("extremely bastard").score.should.equal(20);
+      done();
+    });
+    it('level 4 word with level 1 intensifier should return 8 points', function (done) {
+      negativity("such scumbag").score.should.equal(8);
+      done();
+    });
+    it('level 4 word with level 2 intensifier should return 16 points', function (done) {
+      negativity("complete scumbag").score.should.equal(12);
+      done();
+    });
+    it('level 4 word with level 3 intensifier should return 24 points', function (done) {
+      negativity("extremely scumbag").score.should.equal(16);
+      done();
+    });
+    it('level 3 word with level 1 intensifier should return 6 points', function (done) {
+      negativity("such evil").score.should.equal(6);
+      done();
+    });
+    it('level 3 word with level 2 intensifier should return 9 points', function (done) {
+      negativity("complete evil").score.should.equal(9);
+      done();
+    });
+    it('level 3 word with level 3 intensifier should return 12 points', function (done) {
+      negativity("extremely evil").score.should.equal(12);
+      done();
+    });
+    it('level 2 word with level 1 intensifier should return 4 points', function (done) {
+      negativity("such ache").score.should.equal(4);
+      done();
+    });
+    it('level 2 word with level 2 intensifier should return 5 points', function (done) {
+      negativity("complete ache").score.should.equal(6);
+      done();
+    });
+    it('level 2 word with level 3 intensifier should return 24 points', function (done) {
+      negativity("extremely ache").score.should.equal(8);
+      done();
+    });
+    it('level 1 word with level 1 intensifier should return 2 points', function (done) {
+      negativity("such anti").score.should.equal(2);
+      done();
+    });
+    it('level 1 word with level 2 intensifier should return 3 points', function (done) {
+      negativity("complete anti").score.should.equal(3);
+      done();
+    });
+    it('level 1 word with level 3 intensifier should return 4 points', function (done) {
+      negativity("extremely anti").score.should.equal(4);
+      done();
+    });
   });
   describe('#negativeComparative', function () {
     it('should return score divided by word length', function (done) {
@@ -62,6 +122,66 @@ describe('Positivity', function () {
     });
     it('level 1 should return 1 points', function (done) {
       positivity("cool").score.should.equal(1);
+      done();
+    });
+    it('level 5 word with level 1 intensifier should return 10 points', function (done) {
+      positivity("such breathtaking").score.should.equal(10);
+      done();
+    });
+    it('level 5 word with level 2 intensifier should return 15 points', function (done) {
+      positivity("complete breathtaking").score.should.equal(15);
+      done();
+    });
+    it('level 5 word with level 3 intensifier should return 20 points', function (done) {
+      positivity("extremely breathtaking").score.should.equal(20);
+      done();
+    });
+    it('level 4 word with level 1 intensifier should return 8 points', function (done) {
+      positivity("such fun").score.should.equal(8);
+      done();
+    });
+    it('level 4 word with level 2 intensifier should return 16 points', function (done) {
+      positivity("complete fun").score.should.equal(12);
+      done();
+    });
+    it('level 4 word with level 3 intensifier should return 24 points', function (done) {
+      positivity("extremely fun").score.should.equal(16);
+      done();
+    });
+    it('level 3 word with level 1 intensifier should return 6 points', function (done) {
+      positivity("such delight").score.should.equal(6);
+      done();
+    });
+    it('level 3 word with level 2 intensifier should return 9 points', function (done) {
+      positivity("complete delight").score.should.equal(9);
+      done();
+    });
+    it('level 3 word with level 3 intensifier should return 12 points', function (done) {
+      positivity("extremely delight").score.should.equal(12);
+      done();
+    });
+    it('level 2 word with level 1 intensifier should return 4 points', function (done) {
+      positivity("such eager").score.should.equal(4);
+      done();
+    });
+    it('level 2 word with level 2 intensifier should return 5 points', function (done) {
+      positivity("complete eager").score.should.equal(6);
+      done();
+    });
+    it('level 2 word with level 3 intensifier should return 24 points', function (done) {
+      positivity("extremely eager").score.should.equal(8);
+      done();
+    });
+    it('level 1 word with level 1 intensifier should return 2 points', function (done) {
+      positivity("such trust").score.should.equal(2);
+      done();
+    });
+    it('level 1 word with level 2 intensifier should return 3 points', function (done) {
+      positivity("complete trust").score.should.equal(3);
+      done();
+    });
+    it('level 1 word with level 3 intensifier should return 4 points', function (done) {
+      positivity("extremely trust").score.should.equal(4);
       done();
     });
   });
