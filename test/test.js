@@ -99,6 +99,12 @@ describe('Negativity', function () {
       done();
     });
   });
+  describe('#negativeComparative', function () {
+    it('should properly handle punctuation', function (done) {
+      negativity("I'll be here till 5").score.should.equal(0);
+      done();
+    });
+  });
 });
 
 
@@ -194,6 +200,12 @@ describe('Positivity', function () {
   describe('#positiveWordCount', function () {
     it('should return the positive world count', function (done) {
       positivity("This is two amazing cool words").words.length.should.equal(2);
+      done();
+    });
+  });
+  describe('#positiveComparative', function () {
+    it('should properly handle punctuation', function (done) {
+      positivity("I'll be here till 5").score.should.equal(0);
       done();
     });
   });
