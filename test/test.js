@@ -44,6 +44,14 @@ describe('Negativity', function () {
       negativity("I'll be here till 5").score.should.equal(0);
       done();
     });
+    it('should properly handle hyphenated words', function (done) {
+      negativity("you are self-deluded").score.should.equal(2);
+      done();
+    });
+    it('should properly handle n00b (the only word in the AFINN list with a number)', function (done) {
+      negativity("you are a n00b").score.should.equal(2);
+      done();
+    });
   });
 });
 
@@ -86,6 +94,11 @@ describe('Positivity', function () {
   describe('#positiveComparative', function () {
     it('should properly handle punctuation', function (done) {
       positivity("I'll be here till 5").score.should.equal(0);
+      done();
+    });
+
+    it('should properly handle hyphenated words', function (done) {
+      positivity("it was a once-in-a-lifetime day").score.should.equal(3);
       done();
     });
   });
