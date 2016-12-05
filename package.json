@@ -2,9 +2,15 @@
   "name": "Sentimental",
   "description": "Sentiment Analysis module",
   "repository": "git://github.com/thinkroth/Sentimental",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Kevin M Roth",
+  "contributors": [{
+    "name" : "Samuel Anthony Custer",
+    "email" : "samuel.a.custer@gmail.com",
+    "url" : "https://samcus.co"
+  }],
   "dependencies": {
+    "lodash": "^4.17.2"
   },
   "scripts": {
     "test": "make test"
