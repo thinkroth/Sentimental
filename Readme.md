@@ -1,10 +1,10 @@
 [![Build Status](https://secure.travis-ci.org/thinkroth/Sentimental.png)](http://travis-ci.org/thinkroth/Sentimental)
 # SentiMental - Putting the Mental in Sentimental
-      
+
   Sentiment analysis tool for node.js based on the [AFINN-111 wordlist](http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id=6010).
 
   Version 1.0 introduces performance improvements making it both the first, and now fastest, AFINN backed Sentiment Analysis tool for node.
-  
+
 ## Install
     $ npm install Sentimental
 
@@ -13,6 +13,7 @@
   * Positivity ranking
   * Negativity ranking
   * Analyze - combines Positivity and Negativity ranking into an aggregate sentiment score
+  * Inject changes to AFINN library programmatically
 
 ## Example
 ```js
@@ -27,9 +28,9 @@ analyze("I am happy"); //Score: 3, Comparative: 1
 analyze("I am so happy"); //Score: 6, Comparative: 1.5
 analyze("I am extremely happy"); //Score: 12, Comparative: 3
 analyze("I am really sad"); //Score: -4, Comparative: -1
+analyze("I made 'Good' a 0 since it is in my brand name.",{"good":0}); // This will change the score and persist through the rest of the application
+analyze("I added noob to the AFINN!",{"noobie":-5});
 ```
-
-
 
 ## Running Tests
 
@@ -42,8 +43,7 @@ then run the tests:
     $ make test
 
 
-
-## License 
+## License
 
 (The MIT License)
 
