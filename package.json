@@ -4,8 +4,7 @@
   "repository": "git://github.com/thinkroth/Sentimental",
   "version": "1.0.1",
   "author": "Kevin M Roth",
-  "dependencies": {
-  },
+  "dependencies": {},
   "scripts": {
     "test": "make test"
   },
