@@ -2,6 +2,8 @@
 # SentiMental - Putting the Mental in Sentimental
       
   Sentiment analysis tool for node.js based on the [AFINN-111 wordlist](http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id=6010).
+
+  Version 1.0 introduces performance improvements making it both the first, and now fastest, AFINN backed Sentiment Analysis tool for node.
   
 ## Install
     $ npm install Sentimental
@@ -18,13 +20,17 @@
 
 ## Example
 ```js
-var analyze = require('sentimental').analyze,
-    positivity = require('sentimental').positivity,
-    negativity = require('sentimental').negativity;
+var analyze = require('Sentimental').analyze,
+    positivity = require('Sentimental').positivity,
+    negativity = require('Sentimental').negativity;
 
 analyze("Hey you worthless scumbag"); //Score: -6, Comparative:-1.5
 positivity("This is so cool"); //Score: 1, Comparative:.25
 negativity("Hey you worthless scumbag"); //Score: 6, Comparative:1.5
+analyze("I am happy"); //Score: 3, Comparative: 1
+analyze("I am so happy"); //Score: 6, Comparative: 1.5
+analyze("I am extremely happy"); //Score: 12, Comparative: 3
+analyze("I am really sad"); //Score: -4, Comparative: -1
 ```
 
 
