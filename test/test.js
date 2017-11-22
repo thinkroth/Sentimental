@@ -122,4 +122,11 @@ describe('Analyze', function () {
       done();
     });
   });
+  describe('Russian', function () {
+    it('RU1', function(done) {
+      analyze("Система автоопределения тональности явно недооценена").score.should.equal(-1);
+      analyze("Система автоопределения тональности явно недооценена").comparative.should.equal(-0.2);
+      done();
+    });
+  });
 });
